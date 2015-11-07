@@ -1,6 +1,8 @@
 //Sean Dai
 //CS 2110: HW 11
 //Possible game states
+#ifndef _GAME
+#define _GAME
 #define TITLE -1
 #define GAMEOVER 0
 #define INGAME 1
@@ -64,4 +66,4 @@ void init_blocks();
 void drawBlocks();
 void refresh();
 void drawProgress();
-
+#endif //_GAME

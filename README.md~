@@ -1,10 +1,8 @@
-=============================================
-Breakout
+# Breakout
 
 A simple game created for CS 2110.
 
-HW11
-=============================================
+## Instructions
 To start the game, enter "make vba" into 
 the terminal.
 
@@ -20,12 +18,8 @@ screen, or you'll lose a life! You start with
 
 If you can make it past LVL 2, then YOU WIN!
 
-==============================================
-CONTROLS
-==============================================
+## CONTROLS
 START = new game
 SELECT = return to title screen
 UP/DOWN/LEFT/RIGHT = move paddle
-
-
 
