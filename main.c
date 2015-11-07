@@ -9,12 +9,11 @@ int main(void) {
 
     REG_DISPCNT = MODE4 | BG2_ENABLE | BUFFER1FLAG;
 
-    while(1)
-    {
+    while (1) {
         waitForVblank();
         flipPage();
         if (KEY_DOWN_NOW(BUTTON_START)) {
-            switch(state) {
+            switch (state) {
                 case TITLE:
                     init_game();
                     break;
@@ -39,8 +38,6 @@ int main(void) {
             }
         }
         refresh();
-
-
     }
     return 0;
 }

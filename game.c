@@ -45,6 +45,7 @@ void reset() {
 	init_palette(start_screen_palette);
     drawImage4(0,0,240,160,start_screen);
 }
+
 //Starts the game by initializing in-game screen & basic settings
 void init_game() {
 	state = INGAME;
@@ -93,7 +94,6 @@ void end_game() {
     drawImage4(0,0,240,160,game_over);
 
     //Draws a moving pacman figure across the end screen
-
     if (endingY >= WIDTH) endingY =0;
     if (ending2Y <= 0) ending2Y =  WIDTH;
     int randTile = rand() % 3;
@@ -105,6 +105,7 @@ void drawPaddle() {
     drawRect4(START_X,pd.oldY,PADDLE_WIDTH,PADDLE_HEIGHT,BACKGROUND_COLOR);
     drawRect4(START_X,pd.y,PADDLE_WIDTH,PADDLE_HEIGHT,PADDLE_COLOR);
 }
+
 //Moves the paddle horizontally on the game board
 //@param dy the integer distance to move the paddle
 void movePaddle(int dy) {
@@ -157,6 +158,7 @@ void drawBlocks() {
     }
 
 }
+
 //Returns 1 if blip touches the paddle
 int collidesWithPaddle() {
     if (abs(blip.x - START_X) == PADDLE_HEIGHT) {
@@ -182,6 +184,7 @@ int collidesWithBlock() {
     }
     return 0;
 }
+
 //Redraws the game state for each iteration of the loop.
 //Determines whether game is won/lost.
 void refresh() {
@@ -191,8 +194,8 @@ void refresh() {
         case INGAME:
                 init_palette(colorSwatch);
                 blank_screen(BACKGROUND_COLOR);
-
                 moveBall();
+
                 //Removes block when hit & alters blip's trajector
                 if (collidesWithBlock()) {
                     blip.moveX = -blip.moveX;
@@ -206,7 +209,9 @@ void refresh() {
                 drawBall();
                 drawProgress();
 
-                if (blocks_left == 0) next_level();
+                if (blocks_left == 0) {
+                    next_level();
+                }
                 break;
         case GAMEOVER:
                 end_game();
@@ -221,7 +226,6 @@ void refresh() {
 
 //Draws the current score, level, and number of lives remaining.
  void drawProgress() {
-    //init_palette(colorSwatch);
     sprintf(buffer, "%d", score);
     drawString4(150,212,buffer,4);
     sprintf(buffer, "Lvl %d", level);
