@@ -1,0 +1,31 @@
+=============================================
+Breakout
+
+A simple game created for CS 2110.
+
+HW11
+=============================================
+To start the game, enter "make vba" into 
+the terminal.
+
+Use the arrow keys to move the paddle. Bounce
+the ball off the paddle to hit the blocks on
+the screen. Once all the blocks are gone, you
+will move onto the next level.
+
+The ball moves faster every level. Be careful
+not to let the ball fall to the bottom of the
+screen, or you'll lose a life! You start with
+7 lives. Lose them all, and it's GAME OVER.
+
+If you can make it past LVL 2, then YOU WIN!
+
+==============================================
+CONTROLS
+==============================================
+START = new game
+SELECT = return to title screen
+UP/DOWN/LEFT/RIGHT = move paddle
+
+
+
