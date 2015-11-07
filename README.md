@@ -20,7 +20,9 @@ If you can make it past LVL 2, then YOU WIN!
 
 ## Controls
 START = new game
+
 SELECT = return to title screen
+
 UP/DOWN/LEFT/RIGHT = move paddle
 
 ## Gameplay
